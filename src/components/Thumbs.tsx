@@ -249,12 +249,12 @@ export default class Thumbs extends Component<Props, State> {
                 className: itemClass,
                 onClick: this.handleClickItem.bind(this, index, this.props.children[index]),
                 onKeyDown: this.handleClickItem.bind(this, index, this.props.children[index]),
-                'aria-label': `${this.props.labels.item} ${index + 1}`,
+
                 style: { width: this.props.thumbWidth },
             };
 
             return (
-                <li {...thumbProps} role="button" tabIndex={0}>
+                <li {...thumbProps} tabIndex={0}>
                     {img}
                 </li>
             );
